@@ -647,7 +647,7 @@ define('gallery/routes/index', ['exports', 'ember', 'npm:knuth-shuffle'], functi
                 date: "Jan 2, 2016"
             }];
 
-            for (var i = 0, item; item = items[i]; i++) item.url = '/assets/images/image_' + item.id + '.jpg';
+            for (var i = 0, item; item = items[i]; i++) item.url = '/ruslan-and-lilia/dist/assets/images/image_' + item.id + '.jpg';
 
             return _npmKnuthShuffle['default'].knuthShuffle(items);
         },
@@ -1327,7 +1327,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+051da946"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+420ae84b"});
 }
 
 /* jshint ignore:end */
