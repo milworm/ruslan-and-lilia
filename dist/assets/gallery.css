@@ -68,19 +68,19 @@ body {
         border-radius: 4px;
         box-shadow: 0px 0 1px #535353; }
       .index-page .history-1 .photos .photo-0 {
-        background-image: url("/assets/images/image_8.jpg"); }
+        background-image: url("./assets/images/image_8.jpg"); }
         .index-page .history-1 .photos .photo-0.showing {
           animation: history-1-image-1-show 1.5s forwards; }
       .index-page .history-1 .photos .photo-1 {
         height: 320px;
         margin-top: -160px;
-        background-image: url("/assets/images/image_2.jpg"); }
+        background-image: url("./assets/images/image_2.jpg"); }
         .index-page .history-1 .photos .photo-1.showing {
           animation: history-1-image-2-show 1.5s forwards; }
       .index-page .history-1 .photos .photo-2 {
         height: 360px;
         margin-top: -180px;
-        background-image: url("/assets/images/image_3.jpg"); }
+        background-image: url("./assets/images/image_3.jpg"); }
         .index-page .history-1 .photos .photo-2.showing {
           animation: history-1-image-3-show 1.5s forwards; }
     .index-page .history-1 .text {
@@ -134,27 +134,27 @@ body {
         box-shadow: 0px 0 1px #535353; }
       .index-page .history-2 .photos .photo-0 {
         height: 400px;
-        background-image: url("/assets/images/image_12.jpg"); }
+        background-image: url("./assets/images/image_12.jpg"); }
         .index-page .history-2 .photos .photo-0.showing {
           animation: history-2-image-1-show 1.5s forwards; }
       .index-page .history-2 .photos .photo-1 {
         height: 320px;
         margin-left: 51px;
         margin-top: -230px;
-        background-image: url("/assets/images/image_10.jpg"); }
+        background-image: url("./assets/images/image_10.jpg"); }
         .index-page .history-2 .photos .photo-1.showing {
           animation: history-2-image-2-show 1.5s forwards; }
       .index-page .history-2 .photos .photo-2 {
         height: 360px;
         margin-left: 120px;
-        background-image: url("/assets/images/image_9.jpg"); }
+        background-image: url("./assets/images/image_9.jpg"); }
         .index-page .history-2 .photos .photo-2.showing {
           animation: history-2-image-3-show 1.5s forwards; }
       .index-page .history-2 .photos .photo-3 {
         height: 360px;
         margin-left: 126px;
         margin-top: 24px;
-        background-image: url("/assets/images/image_23.jpg"); }
+        background-image: url("./assets/images/image_23.jpg"); }
         .index-page .history-2 .photos .photo-3.showing {
           animation: history-2-image-4-show 1.5s forwards; }
     .index-page .history-2 .text {
@@ -209,35 +209,35 @@ body {
         height: 430px;
         width: 340px;
         margin-left: 140px !important;
-        background-image: url("/assets/images/image_4.jpg"); }
+        background-image: url("./assets/images/image_4.jpg"); }
         .index-page .history-3 .photos .photo-0.showing {
           animation: history-3-image-1-show 1.5s forwards; }
       .index-page .history-3 .photos .photo-1 {
         height: 320px;
         margin-left: -400px;
         margin-top: -300px;
-        background-image: url("/assets/images/image_5.jpg"); }
+        background-image: url("./assets/images/image_5.jpg"); }
         .index-page .history-3 .photos .photo-1.showing {
           animation: history-3-image-2-show 1.5s forwards; }
       .index-page .history-3 .photos .photo-2 {
         height: 360px;
         margin-left: -380px;
         margin-top: 0px;
-        background-image: url("/assets/images/image_6.jpg"); }
+        background-image: url("./assets/images/image_6.jpg"); }
         .index-page .history-3 .photos .photo-2.showing {
           animation: history-3-image-3-show 1.5s forwards; }
       .index-page .history-3 .photos .photo-3 {
         height: 400px;
         width: 360px;
         margin-top: -320px;
-        background-image: url("/assets/images/image_7.jpg"); }
+        background-image: url("./assets/images/image_7.jpg"); }
         .index-page .history-3 .photos .photo-3.showing {
           animation: history-3-image-4-show 1.5s forwards; }
       .index-page .history-3 .photos .photo-4 {
         height: 360px;
         margin-top: 27px;
         margin-left: -110px !important;
-        background-image: url("/assets/images/image_24.jpg"); }
+        background-image: url("./assets/images/image_24.jpg"); }
         .index-page .history-3 .photos .photo-4.showing {
           animation: history-3-image-5-show 1.5s forwards; }
     .index-page .history-3 .text {
@@ -294,14 +294,14 @@ body {
         height: 430px;
         width: 340px;
         margin-left: 140px !important;
-        background-image: url("/assets/images/image_13.jpg"); }
+        background-image: url("./assets/images/image_13.jpg"); }
         .index-page .history-4 .photos .photo-0.showing {
           animation: history-4-image-1-show 1.5s forwards; }
       .index-page .history-4 .photos .photo-1 {
         height: 320px;
         margin-left: -400px;
         margin-top: -300px;
-        background-image: url("/assets/images/image_18.jpg");
+        background-image: url("./assets/images/image_18.jpg");
         background-position: center bottom; }
         .index-page .history-4 .photos .photo-1.showing {
           animation: history-4-image-2-show 1.5s forwards; }
@@ -309,21 +309,21 @@ body {
         height: 360px;
         margin-left: -380px;
         margin-top: 0px;
-        background-image: url("/assets/images/image_15.jpg"); }
+        background-image: url("./assets/images/image_15.jpg"); }
         .index-page .history-4 .photos .photo-2.showing {
           animation: history-4-image-3-show 1.5s forwards; }
       .index-page .history-4 .photos .photo-3 {
         height: 400px;
         width: 360px;
         margin-top: -320px;
-        background-image: url("/assets/images/image_16.jpg"); }
+        background-image: url("./assets/images/image_16.jpg"); }
         .index-page .history-4 .photos .photo-3.showing {
           animation: history-4-image-4-show 1.5s forwards; }
       .index-page .history-4 .photos .photo-4 {
         height: 360px;
         margin-top: 27px;
         margin-left: -110px !important;
-        background-image: url("/assets/images/image_17.jpg"); }
+        background-image: url("./assets/images/image_17.jpg"); }
         .index-page .history-4 .photos .photo-4.showing {
           animation: history-4-image-5-show 1.5s forwards; }
       .index-page .history-4 .photos .photo-5 {
@@ -331,11 +331,11 @@ body {
         width: 200px;
         margin-left: 192px;
         margin-top: -340px;
-        background-image: url("/assets/images/image_14.jpg"); }
+        background-image: url("./assets/images/image_14.jpg"); }
         .index-page .history-4 .photos .photo-5.showing {
           animation: history-4-image-6-show 1.5s forwards; }
       .index-page .history-4 .photos .photo-6 {
-        background-image: url("/assets/images/image_25.jpg");
+        background-image: url("./assets/images/image_25.jpg");
         margin-left: 100px;
         height: 262px;
         width: 200px;

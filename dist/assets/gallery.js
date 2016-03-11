@@ -1327,7 +1327,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+72f7703c"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+61e01d8c"});
 }
 
 /* jshint ignore:end */
