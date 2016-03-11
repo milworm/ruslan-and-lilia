@@ -85,7 +85,7 @@ define('gallery/components/mountain-section-component', ['exports', 'ember', 'ga
                 setTimeout(function () {
                     _this.set('state', 'hidden');
                     resolve();
-                }, 1000);
+                }, 2000);
             });
         }
     });
@@ -135,7 +135,7 @@ define('gallery/components/romantic-section-component', ['exports', 'ember', 'ga
                 setTimeout(function () {
                     _this.set('state', 'hidden');
                     resolve();
-                }, 1000);
+                }, 2000);
             });
         }
     });
@@ -1343,7 +1343,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+7662a8b9"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+19faea3a"});
 }
 
 /* jshint ignore:end */
