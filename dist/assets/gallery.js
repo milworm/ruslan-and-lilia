@@ -79,7 +79,7 @@ define('gallery/components/mountain-section-component', ['exports', 'ember', 'ga
                 setTimeout(function () {
                     _this.set('state', 'hidden');
                     resolve();
-                }, 7000);
+                }, 5000);
             });
         }
     });
@@ -1327,7 +1327,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+f6884cd8"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+bcd31b5a"});
 }
 
 /* jshint ignore:end */
