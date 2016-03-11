@@ -695,7 +695,7 @@ define("gallery/templates/application", ["exports"], function (exports) {
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("audio");
-        dom.setAttribute(el1, "src", "./assets/audio/oe.mp3");
+        dom.setAttribute(el1, "src", "/ruslan-and-lilia/dist/assets/audio/oe.mp3");
         dom.setAttribute(el1, "id", "sound");
         dom.setAttribute(el1, "preload", "auto");
         dom.appendChild(el0, el1);
@@ -1327,7 +1327,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+041028ea"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+d2c03e6c"});
 }
 
 /* jshint ignore:end */
