@@ -647,7 +647,7 @@ define('gallery/routes/index', ['exports', 'ember', 'npm:knuth-shuffle'], functi
                 date: "Jan 2, 2016"
             }];
 
-            for (var i = 0, item; item = items[i]; i++) item.url = '/ruslan-and-lilia/dist/assets/images/image_' + item.id + '.jpg';
+            for (var i = 0, item; item = items[i]; i++) item.url = './assets/images/image_' + item.id + '.jpg';
 
             return _npmKnuthShuffle['default'].knuthShuffle(items);
         },
@@ -695,7 +695,7 @@ define("gallery/templates/application", ["exports"], function (exports) {
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("audio");
-        dom.setAttribute(el1, "src", "/assets/audio/oe.mp3");
+        dom.setAttribute(el1, "src", "./assets/audio/oe.mp3");
         dom.setAttribute(el1, "id", "sound");
         dom.setAttribute(el1, "preload", "auto");
         dom.appendChild(el0, el1);
@@ -1327,7 +1327,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+420ae84b"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+041028ea"});
 }
 
 /* jshint ignore:end */
