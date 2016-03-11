@@ -562,6 +562,10 @@ define('gallery/router', ['exports', 'ember', 'gallery/config/environment'], fun
     location: _galleryConfigEnvironment['default'].locationType
   });
 
+  Router.reopen({
+    location: 'hash'
+  });
+
   Router.map(function () {});
 
   exports['default'] = Router;
