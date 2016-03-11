@@ -1,0 +1,619 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "Open Sans"; }
+  body > .ember-view {
+    height: 100%; }
+
+.index-page {
+  width: 100%;
+  height: 100%; }
+  .index-page .section-title {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .index-page .section-title h1 {
+      font-weight: 300;
+      line-height: 28px;
+      font-size: 28px;
+      transition-duration: 1s;
+      transition-property: opacity;
+      width: 720px; }
+      .index-page .section-title h1 > span {
+        width: 100%; }
+    .index-page .section-title.hiding h1 {
+      opacity: 0; }
+    .index-page .section-title.hidden {
+      display: none; }
+  .index-page .history-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .index-page .history-1.hidden {
+      display: none; }
+    .index-page .history-1.hiding .photos {
+      animation: history-1-photos-hide 2s forwards !important; }
+    .index-page .history-1.hiding .text {
+      animation: history-1-text-hide 2s forwards !important; }
+    .index-page .history-1 .photos {
+      width: 400px;
+      height: 400px;
+      position: relative; }
+      .index-page .history-1 .photos.hidden {
+        opacity: 0; }
+      .index-page .history-1 .photos .photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -150px;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        border: 5px solid #FFC107;
+        border-radius: 4px;
+        box-shadow: 0px 0 1px #535353; }
+      .index-page .history-1 .photos .photo-0 {
+        background-image: url("/assets/images/image_8.jpg"); }
+        .index-page .history-1 .photos .photo-0.showing {
+          animation: history-1-image-1-show 1.5s forwards; }
+      .index-page .history-1 .photos .photo-1 {
+        height: 320px;
+        margin-top: -160px;
+        background-image: url("/assets/images/image_2.jpg"); }
+        .index-page .history-1 .photos .photo-1.showing {
+          animation: history-1-image-2-show 1.5s forwards; }
+      .index-page .history-1 .photos .photo-2 {
+        height: 360px;
+        margin-top: -180px;
+        background-image: url("/assets/images/image_3.jpg"); }
+        .index-page .history-1 .photos .photo-2.showing {
+          animation: history-1-image-3-show 1.5s forwards; }
+    .index-page .history-1 .text {
+      width: 400px;
+      max-width: 100%;
+      font-size: 16px;
+      text-indent: 24px;
+      text-align: justify;
+      opacity: 1;
+      transition-duration: 1s;
+      transition-property: opacity, transform;
+      transform: translateX(-200px); }
+      .index-page .history-1 .text.hidden {
+        opacity: 0; }
+      .index-page .history-1 .text.right {
+        animation: shift-right 2s forwards; }
+  .index-page .history-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; }
+    .index-page .history-2.hidden {
+      display: none; }
+    .index-page .history-2.hiding .photos {
+      animation: history-2-photos-hide 2s forwards !important; }
+    .index-page .history-2.hiding .text {
+      animation: history-2-text-hide 2s forwards !important; }
+    .index-page .history-2 .photos {
+      width: 400px;
+      height: 400px;
+      position: relative; }
+      .index-page .history-2 .photos.hidden {
+        opacity: 0; }
+      .index-page .history-2 .photos .photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -150px;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        border: 5px solid #FFC107;
+        border-radius: 4px;
+        box-shadow: 0px 0 1px #535353; }
+      .index-page .history-2 .photos .photo-0 {
+        height: 400px;
+        background-image: url("/assets/images/image_12.jpg"); }
+        .index-page .history-2 .photos .photo-0.showing {
+          animation: history-2-image-1-show 1.5s forwards; }
+      .index-page .history-2 .photos .photo-1 {
+        height: 320px;
+        margin-left: 51px;
+        margin-top: -230px;
+        background-image: url("/assets/images/image_10.jpg"); }
+        .index-page .history-2 .photos .photo-1.showing {
+          animation: history-2-image-2-show 1.5s forwards; }
+      .index-page .history-2 .photos .photo-2 {
+        height: 360px;
+        margin-left: 120px;
+        background-image: url("/assets/images/image_9.jpg"); }
+        .index-page .history-2 .photos .photo-2.showing {
+          animation: history-2-image-3-show 1.5s forwards; }
+      .index-page .history-2 .photos .photo-3 {
+        height: 360px;
+        margin-left: 126px;
+        margin-top: 24px;
+        background-image: url("/assets/images/image_23.jpg"); }
+        .index-page .history-2 .photos .photo-3.showing {
+          animation: history-2-image-4-show 1.5s forwards; }
+    .index-page .history-2 .text {
+      width: 400px;
+      max-width: 100%;
+      font-size: 16px;
+      text-align: justify;
+      opacity: 1;
+      transition-duration: 1s;
+      transition-property: opacity, transform;
+      transform: translateX(200px); }
+      .index-page .history-2 .text.hidden {
+        opacity: 0; }
+      .index-page .history-2 .text.left {
+        animation: shift-left 2s forwards; }
+  .index-page .history-3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; }
+    .index-page .history-3.hidden {
+      display: none; }
+    .index-page .history-3.hiding .photos {
+      animation: history-3-photos-hide 2s forwards !important; }
+    .index-page .history-3.hiding .text {
+      animation: history-3-text-hide 2s forwards !important; }
+    .index-page .history-3 .photos {
+      width: 400px;
+      height: 400px;
+      position: relative; }
+      .index-page .history-3 .photos.hidden {
+        opacity: 0; }
+      .index-page .history-3 .photos .photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -150px;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        border: 5px solid #FFC107;
+        border-radius: 4px;
+        box-shadow: 0px 0 1px #535353; }
+      .index-page .history-3 .photos .photo-0 {
+        height: 430px;
+        width: 340px;
+        margin-left: 140px !important;
+        background-image: url("/assets/images/image_4.jpg"); }
+        .index-page .history-3 .photos .photo-0.showing {
+          animation: history-3-image-1-show 1.5s forwards; }
+      .index-page .history-3 .photos .photo-1 {
+        height: 320px;
+        margin-left: -400px;
+        margin-top: -300px;
+        background-image: url("/assets/images/image_5.jpg"); }
+        .index-page .history-3 .photos .photo-1.showing {
+          animation: history-3-image-2-show 1.5s forwards; }
+      .index-page .history-3 .photos .photo-2 {
+        height: 360px;
+        margin-left: -380px;
+        margin-top: 0px;
+        background-image: url("/assets/images/image_6.jpg"); }
+        .index-page .history-3 .photos .photo-2.showing {
+          animation: history-3-image-3-show 1.5s forwards; }
+      .index-page .history-3 .photos .photo-3 {
+        height: 400px;
+        width: 360px;
+        margin-top: -320px;
+        background-image: url("/assets/images/image_7.jpg"); }
+        .index-page .history-3 .photos .photo-3.showing {
+          animation: history-3-image-4-show 1.5s forwards; }
+      .index-page .history-3 .photos .photo-4 {
+        height: 360px;
+        margin-top: 27px;
+        margin-left: -110px !important;
+        background-image: url("/assets/images/image_24.jpg"); }
+        .index-page .history-3 .photos .photo-4.showing {
+          animation: history-3-image-5-show 1.5s forwards; }
+    .index-page .history-3 .text {
+      width: 400px;
+      max-width: 100%;
+      font-size: 16px;
+      text-align: justify;
+      opacity: 1;
+      transition-duration: 1s;
+      transition-property: opacity, transform;
+      transform: translateX(200px); }
+      .index-page .history-3 .text.hidden {
+        opacity: 0; }
+      .index-page .history-3 .text.invisible {
+        display: none; }
+      .index-page .history-3 .text.none {
+        animation: hide 1s forwards; }
+  .index-page .history-4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; }
+    .index-page .history-4.hidden {
+      display: none; }
+    .index-page .history-4.hiding .photos {
+      animation: history-4-photos-hide 2s forwards !important; }
+    .index-page .history-4.hiding .text {
+      animation: history-4-text-hide 2s forwards !important; }
+    .index-page .history-4 .photos {
+      width: 400px;
+      height: 400px;
+      position: relative; }
+      .index-page .history-4 .photos.hidden {
+        opacity: 0; }
+      .index-page .history-4 .photos .photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -150px;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        border: 5px solid #FFC107;
+        border-radius: 4px;
+        box-shadow: 0px 0 1px #535353; }
+      .index-page .history-4 .photos .photo-0 {
+        height: 430px;
+        width: 340px;
+        margin-left: 140px !important;
+        background-image: url("/assets/images/image_13.jpg"); }
+        .index-page .history-4 .photos .photo-0.showing {
+          animation: history-4-image-1-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-1 {
+        height: 320px;
+        margin-left: -400px;
+        margin-top: -300px;
+        background-image: url("/assets/images/image_18.jpg");
+        background-position: center bottom; }
+        .index-page .history-4 .photos .photo-1.showing {
+          animation: history-4-image-2-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-2 {
+        height: 360px;
+        margin-left: -380px;
+        margin-top: 0px;
+        background-image: url("/assets/images/image_15.jpg"); }
+        .index-page .history-4 .photos .photo-2.showing {
+          animation: history-4-image-3-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-3 {
+        height: 400px;
+        width: 360px;
+        margin-top: -320px;
+        background-image: url("/assets/images/image_16.jpg"); }
+        .index-page .history-4 .photos .photo-3.showing {
+          animation: history-4-image-4-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-4 {
+        height: 360px;
+        margin-top: 27px;
+        margin-left: -110px !important;
+        background-image: url("/assets/images/image_17.jpg"); }
+        .index-page .history-4 .photos .photo-4.showing {
+          animation: history-4-image-5-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-5 {
+        height: 260px;
+        width: 200px;
+        margin-left: 192px;
+        margin-top: -340px;
+        background-image: url("/assets/images/image_14.jpg"); }
+        .index-page .history-4 .photos .photo-5.showing {
+          animation: history-4-image-6-show 1.5s forwards; }
+      .index-page .history-4 .photos .photo-6 {
+        background-image: url("/assets/images/image_25.jpg");
+        margin-left: 100px;
+        height: 262px;
+        width: 200px;
+        background-size: contain;
+        margin-top: 152px; }
+        .index-page .history-4 .photos .photo-6.showing {
+          animation: history-4-image-7-show 1.5s forwards; }
+    .index-page .history-4 .text {
+      width: 400px;
+      max-width: 100%;
+      font-size: 16px;
+      text-align: justify;
+      opacity: 1;
+      transition-duration: 1s;
+      transition-property: opacity, transform;
+      transform: translateX(200px); }
+      .index-page .history-4 .text.hidden {
+        opacity: 0; }
+      .index-page .history-4 .text.invisible {
+        display: none; }
+      .index-page .history-4 .text.none {
+        animation: hide 1s forwards; }
+  .index-page .section-images {
+    height: 100%;
+    width: 100%;
+    padding: 10px 0; }
+    .index-page .section-images.hidden {
+      display: none; }
+    .index-page .section-images.visible {
+      display: block; }
+    .index-page .section-images .items {
+      margin: 0 auto !important; }
+      .index-page .section-images .items .items-sizer {
+        width: 20%; }
+      .index-page .section-images .items .item {
+        width: 20%;
+        height: 220px;
+        float: left;
+        border: 2px solid #fff;
+        border-radius: 5px; }
+        .index-page .section-images .items .item .image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center; }
+        .index-page .section-images .items .item.item-height-2 {
+          height: 320px; }
+      .index-page .section-images .items:after {
+        content: '';
+        display: block;
+        clear: both; }
+
+@media screen and (min-width: 520px) {
+  .index-page .items {
+    max-width: 520px; } }
+
+@media screen and (min-width: 780px) {
+  .index-page .items {
+    max-width: 780px; } }
+
+@media screen and (min-width: 1040px) {
+  .index-page .items {
+    max-width: 1040px; } }
+
+@media screen and (min-width: 1300px) {
+  .index-page .items {
+    max-width: 1300px; } }
+
+@keyframes shift-right {
+  to {
+    transform: translateX(0); } }
+
+@keyframes history-1-image-1-show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    transform: rotateZ(-5deg); } }
+
+@keyframes history-1-image-2-show {
+  from {
+    opacity: 0;
+    transform: translateY(-25px); }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateZ(-20deg); } }
+
+@keyframes history-1-image-3-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(15deg); } }
+
+@keyframes history-1-photos-hide {
+  to {
+    opacity: 0;
+    transform: translateY(-100%); } }
+
+@keyframes history-1-text-hide {
+  from {
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(100%); } }
+
+@keyframes shift-left {
+  to {
+    transform: translateX(0); } }
+
+@keyframes history-2-image-1-show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    transform: rotateZ(-5deg); } }
+
+@keyframes history-2-image-2-show {
+  from {
+    opacity: 0;
+    transform: translateY(-25px); }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateZ(5deg); } }
+
+@keyframes history-2-image-3-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg); } }
+
+@keyframes history-2-image-4-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(15deg); } }
+
+@keyframes history-2-photos-hide {
+  to {
+    opacity: 0;
+    transform: translateY(100%); } }
+
+@keyframes history-2-text-hide {
+  from {
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(-100%); } }
+
+@keyframes hide {
+  to {
+    opacity: 0; } }
+
+@keyframes history-3-image-1-show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    transform: rotateZ(-5deg); } }
+
+@keyframes history-3-image-2-show {
+  from {
+    opacity: 0;
+    transform: translateY(-25px); }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateZ(-5deg); } }
+
+@keyframes history-3-image-3-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg); } }
+
+@keyframes history-3-image-4-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg); } }
+
+@keyframes history-3-image-5-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(15deg); } }
+
+@keyframes history-3-photos-hide {
+  to {
+    opacity: 0;
+    transform: translateY(100%); } }
+
+@keyframes history-3-text-hide {
+  from {
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(-100%); } }
+
+@keyframes hide {
+  to {
+    opacity: 0; } }
+
+@keyframes history-4-image-1-show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    transform: rotateZ(-5deg); } }
+
+@keyframes history-4-image-2-show {
+  from {
+    opacity: 0;
+    transform: translateY(-25px); }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateZ(-5deg); } }
+
+@keyframes history-4-image-3-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg); } }
+
+@keyframes history-4-image-4-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg); } }
+
+@keyframes history-4-image-5-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(15deg); } }
+
+@keyframes history-4-image-6-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(-15deg); } }
+
+@keyframes history-4-image-7-show {
+  from {
+    opacity: 0;
+    transform: translateX(-25px); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(15deg); } }
+
+@keyframes history-4-photos-hide {
+  to {
+    opacity: 0;
+    transform: translateY(100%); } }
+
+@keyframes history-4-text-hide {
+  from {
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    transform: translateX(-100%); } }
+
+/*# sourceMappingURL=gallery.css.map */
