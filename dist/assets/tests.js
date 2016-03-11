@@ -40,7 +40,7 @@ define('gallery/tests/components/section-component.jshint', ['exports'], functio
   QUnit.module('JSHint - components/section-component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/section-component.js should pass jshint.\ncomponents/section-component.js: line 23, col 13, Expected \'{\' and instead saw \'result\'.\ncomponents/section-component.js: line 83, col 13, Expected \'{\' and instead saw \'promise\'.\n\n2 errors');
+    assert.ok(false, 'components/section-component.js should pass jshint.\ncomponents/section-component.js: line 23, col 13, Expected \'{\' and instead saw \'result\'.\ncomponents/section-component.js: line 88, col 13, Expected \'{\' and instead saw \'promise\'.\n\n2 errors');
   });
 });
 define('gallery/tests/components/typing-component.jshint', ['exports'], function (exports) {

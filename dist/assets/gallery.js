@@ -70,6 +70,12 @@ define('gallery/components/mountain-section-component', ['exports', 'ember', 'ga
             });
         },
 
+        beforeHide: function beforeHide() {
+            return new _ember['default'].RSVP.Promise(function (resolve) {
+                setTimeout(resolve, 2500);
+            });
+        },
+
         hide: function hide() {
             var _this = this;
 
@@ -79,7 +85,7 @@ define('gallery/components/mountain-section-component', ['exports', 'ember', 'ga
                 setTimeout(function () {
                     _this.set('state', 'hidden');
                     resolve();
-                }, 5000);
+                }, 1000);
             });
         }
     });
@@ -114,6 +120,12 @@ define('gallery/components/romantic-section-component', ['exports', 'ember', 'ga
             });
         },
 
+        beforeHide: function beforeHide() {
+            return new _ember['default'].RSVP.Promise(function (resolve) {
+                setTimeout(resolve, 2500);
+            });
+        },
+
         hide: function hide() {
             var _this = this;
 
@@ -123,7 +135,7 @@ define('gallery/components/romantic-section-component', ['exports', 'ember', 'ga
                 setTimeout(function () {
                     _this.set('state', 'hidden');
                     resolve();
-                }, 10000);
+                }, 1000);
             });
         }
     });
@@ -160,7 +172,7 @@ define('gallery/components/section-component', ['exports', 'ember'], function (e
         },
 
         startAnimations: function startAnimations() {
-            return _ember['default'].RSVP.resolve().then(this.show.bind(this)).then(this.showText.bind(this)).then(this.moveText.bind(this)).then(this.showPhotos.bind(this)).then(this.hide.bind(this));
+            return _ember['default'].RSVP.resolve().then(this.show.bind(this)).then(this.showText.bind(this)).then(this.moveText.bind(this)).then(this.showPhotos.bind(this)).then(this.beforeHide.bind(this)).then(this.hide.bind(this));
         },
 
         show: function show() {
@@ -169,6 +181,10 @@ define('gallery/components/section-component', ['exports', 'ember'], function (e
             return new _ember['default'].RSVP.Promise(function (resolve) {
                 setTimeout(resolve, 10);
             });
+        },
+
+        beforeHide: function beforeHide() {
+            return _ember['default'].RSVP.resolve();
         },
 
         hide: function hide() {
@@ -308,13 +324,13 @@ define('gallery/controllers/index', ['exports', 'ember'], function (exports, _em
         showImages: function showImages() {
             this.set('imagesState', 'visible');
 
-            _ember['default'].run.schedule('afterRender', function () {
+            setTimeout(function () {
                 _ember['default'].$('.items').masonry({
                     columnWidth: '.items-sizer',
                     itemSelector: '.item',
                     percentPosition: true
                 });
-            });
+            }, 100);
         },
 
         loadImage: function loadImage(src) {
@@ -1327,7 +1343,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+bcd31b5a"});
+  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+7662a8b9"});
 }
 
 /* jshint ignore:end */
