@@ -33,378 +33,378 @@ define('gallery/components/app-version', ['exports', 'ember-cli-app-version/comp
   });
 });
 define('gallery/components/image-component', ['exports', 'ember'], function (exports, _ember) {
-    exports['default'] = _ember['default'].Component.extend({
-        classNames: ['col', 's12', 'm4', 'l2', 'image-container'],
-        data: null,
-        showDate: false,
-        showBackground: false
-    });
+  exports['default'] = _ember['default'].Component.extend({
+    classNames: ['col', 's12', 'm4', 'l2', 'image-container'],
+    data: null,
+    showDate: false,
+    showBackground: false
+  });
 });
 define('gallery/components/mountain-section-component', ['exports', 'ember', 'gallery/components/section-component'], function (exports, _ember, _galleryComponentsSectionComponent) {
-    exports['default'] = _galleryComponentsSectionComponent['default'].extend({
-        showText: function showText() {
-            this.set('textState', 'showing');
+  exports['default'] = _galleryComponentsSectionComponent['default'].extend({
+    showText: function showText() {
+      this.set('textState', 'showing');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 4500);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 4500);
+      });
+    },
 
-        moveText: function moveText() {
-            this.set('textState', this.get('textAlign'));
+    moveText: function moveText() {
+      this.set('textState', this.get('textAlign'));
 
-            return _ember['default'].RSVP.resolve().then(this.onMoveText.bind(this)).then(this.hideText.bind(this));
-        },
+      return _ember['default'].RSVP.resolve().then(this.onMoveText.bind(this)).then(this.hideText.bind(this));
+    },
 
-        onMoveText: function onMoveText() {
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 1500);
-            });
-        },
+    onMoveText: function onMoveText() {
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 1500);
+      });
+    },
 
-        hideText: function hideText() {
-            this.set('textState', 'invisible');
+    hideText: function hideText() {
+      this.set('textState', 'invisible');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 10);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 10);
+      });
+    },
 
-        beforeHide: function beforeHide() {
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 2500);
-            });
-        },
+    beforeHide: function beforeHide() {
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 2500);
+      });
+    },
 
-        hide: function hide() {
-            var _this = this;
+    hide: function hide() {
+      var _this = this;
 
-            this.set('state', 'hiding');
+      this.set('state', 'hiding');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(function () {
-                    _this.set('state', 'hidden');
-                    resolve();
-                }, 2000);
-            });
-        }
-    });
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(function () {
+          _this.set('state', 'hidden');
+          resolve();
+        }, 2000);
+      });
+    }
+  });
 });
 define('gallery/components/romantic-section-component', ['exports', 'ember', 'gallery/components/section-component'], function (exports, _ember, _galleryComponentsSectionComponent) {
-    exports['default'] = _galleryComponentsSectionComponent['default'].extend({
-        showText: function showText() {
-            this.set('textState', 'showing');
+  exports['default'] = _galleryComponentsSectionComponent['default'].extend({
+    showText: function showText() {
+      this.set('textState', 'showing');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 5500);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 5500);
+      });
+    },
 
-        moveText: function moveText() {
-            this.set('textState', this.get('textAlign'));
+    moveText: function moveText() {
+      this.set('textState', this.get('textAlign'));
 
-            return _ember['default'].RSVP.resolve().then(this.onMoveText.bind(this)).then(this.hideText.bind(this));
-        },
+      return _ember['default'].RSVP.resolve().then(this.onMoveText.bind(this)).then(this.hideText.bind(this));
+    },
 
-        onMoveText: function onMoveText() {
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 500);
-            });
-        },
+    onMoveText: function onMoveText() {
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 500);
+      });
+    },
 
-        hideText: function hideText() {
-            this.set('textState', 'invisible');
+    hideText: function hideText() {
+      this.set('textState', 'invisible');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 10);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 10);
+      });
+    },
 
-        beforeHide: function beforeHide() {
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 2500);
-            });
-        },
+    beforeHide: function beforeHide() {
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 2500);
+      });
+    },
 
-        hide: function hide() {
-            var _this = this;
+    hide: function hide() {
+      var _this = this;
 
-            this.set('state', 'hiding');
+      this.set('state', 'hiding');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(function () {
-                    _this.set('state', 'hidden');
-                    resolve();
-                }, 2000);
-            });
-        }
-    });
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(function () {
+          _this.set('state', 'hidden');
+          resolve();
+        }, 2000);
+      });
+    }
+  });
 });
 define('gallery/components/section-component', ['exports', 'ember'], function (exports, _ember) {
-    exports['default'] = _ember['default'].Component.extend({
-        classNameBindings: ['state'],
-        tagName: 'section',
-        state: 'hidden',
-        textState: 'hidden',
-        textAlign: '',
-        photos: 0,
-        photosStates: [],
-        text: '',
-        onRender: null,
+  exports['default'] = _ember['default'].Component.extend({
+    classNameBindings: ['state'],
+    tagName: 'section',
+    state: 'hidden',
+    textState: 'hidden',
+    textAlign: '',
+    photos: 0,
+    photosStates: [],
+    text: '',
+    onRender: null,
 
-        initText: (function () {
-            this.set('text', _ember['default'].String.htmlSafe(this.get('text')));
-        }).on('text').on('init'),
+    initText: (function () {
+      this.set('text', _ember['default'].String.htmlSafe(this.get('text')));
+    }).on('text').on('init'),
 
-        initPhotoStates: (function () {
-            var count = this.get('photos'),
-                result = [];
+    initPhotoStates: (function () {
+      var count = this.get('photos'),
+        result = [];
 
-            for (var i = 0; i < count; i++) result.push({
-                state: 'hidden'
-            });
+      for (var i = 0; i < count; i++) result.push({
+        state: 'hidden'
+      });
 
-            this.set('photosStates', result);
-        }).on('photos').on('init'),
+      this.set('photosStates', result);
+    }).on('photos').on('init'),
 
-        willRender: function willRender() {
-            this.get('onRender')(this.startAnimations.bind(this));
-        },
+    willRender: function willRender() {
+      this.get('onRender')(this.startAnimations.bind(this));
+    },
 
-        startAnimations: function startAnimations() {
-            return _ember['default'].RSVP.resolve().then(this.show.bind(this)).then(this.showText.bind(this)).then(this.moveText.bind(this)).then(this.showPhotos.bind(this)).then(this.beforeHide.bind(this)).then(this.hide.bind(this));
-        },
+    startAnimations: function startAnimations() {
+      return _ember['default'].RSVP.resolve().then(this.show.bind(this)).then(this.showText.bind(this)).then(this.moveText.bind(this)).then(this.showPhotos.bind(this)).then(this.beforeHide.bind(this)).then(this.hide.bind(this));
+    },
 
-        show: function show() {
-            this.set('state', 'visible');
+    show: function show() {
+      this.set('state', 'visible');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 10);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 10);
+      });
+    },
 
-        beforeHide: function beforeHide() {
-            return _ember['default'].RSVP.resolve();
-        },
+    beforeHide: function beforeHide() {
+      return _ember['default'].RSVP.resolve();
+    },
 
-        hide: function hide() {
-            var _this = this;
+    hide: function hide() {
+      var _this = this;
 
-            this.set('state', 'hiding');
+      this.set('state', 'hiding');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(function () {
-                    _this.set('state', 'hidden');
-                    resolve();
-                }, 2000);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(function () {
+          _this.set('state', 'hidden');
+          resolve();
+        }, 2000);
+      });
+    },
 
-        showText: function showText() {
-            this.set('textState', 'showing');
+    showText: function showText() {
+      this.set('textState', 'showing');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 4000);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 4000);
+      });
+    },
 
-        moveText: function moveText() {
-            this.set('textState', this.get('textAlign'));
+    moveText: function moveText() {
+      this.set('textState', this.get('textAlign'));
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 2500);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 2500);
+      });
+    },
 
-        showPhotos: function showPhotos() {
-            var count = this.get('photos'),
-                promise = _ember['default'].RSVP.resolve();
+    showPhotos: function showPhotos() {
+      var count = this.get('photos'),
+        promise = _ember['default'].RSVP.resolve();
 
-            for (var i = 0; i < count; i++) promise = promise.then(this.showPhoto.bind(this, i));
+      for (var i = 0; i < count; i++) promise = promise.then(this.showPhoto.bind(this, i));
 
-            return promise;
-        },
+      return promise;
+    },
 
-        showPhoto: function showPhoto(index) {
-            var photo = this.get('photosStates')[index];
-            _ember['default'].set(photo, 'state', 'showing');
+    showPhoto: function showPhoto(index) {
+      var photo = this.get('photosStates')[index];
+      _ember['default'].set(photo, 'state', 'showing');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 3500);
-            });
-        }
-    });
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 3500);
+      });
+    }
+  });
 });
 define("gallery/components/typing-component", ["exports", "ember"], function (exports, _ember) {
-    exports["default"] = _ember["default"].Component.extend({
-        str: "",
-        result: "",
-        tagName: "span",
+  exports["default"] = _ember["default"].Component.extend({
+    str: "",
+    result: "",
+    tagName: "span",
 
-        enterLetter: function enterLetter() {
-            var str = this.get('str'),
-                char = str[0];
+    enterLetter: function enterLetter() {
+      var str = this.get('str'),
+        char = str[0];
 
-            if (!str.length) return this.stopTyping();
+      if (!str.length) return this.stopTyping();
 
-            this.set('str', str.slice(1));
-            this.set('result', this.get('result') + char);
-        },
+      this.set('str', str.slice(1));
+      this.set('result', this.get('result') + char);
+    },
 
-        startTyping: (function () {
-            setInterval(this.enterLetter.bind(this), 100);
-        }).on('didInsertElement'),
+    startTyping: (function () {
+      setInterval(this.enterLetter.bind(this), 100);
+    }).on('didInsertElement'),
 
-        stopTyping: (function () {
-            clearInterval(this.get('interval'));
-        }).on('willDestroyElement')
-    });
+    stopTyping: (function () {
+      clearInterval(this.get('interval'));
+    }).on('willDestroyElement')
+  });
 });
 define('gallery/controllers/array', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller;
 });
 define('gallery/controllers/index', ['exports', 'ember'], function (exports, _ember) {
-    exports['default'] = _ember['default'].Controller.extend({
-        items: [],
-        imagesAvaible: false,
-        titleState: '',
-        imagesState: 'hidden',
+  exports['default'] = _ember['default'].Controller.extend({
+    items: [],
+    imagesAvaible: false,
+    titleState: '',
+    imagesState: 'hidden',
 
-        sectionsAnimations: [],
+    sectionsAnimations: [],
 
-        start: function start() {
-            this.loadImages().then(this.hideTitle.bind(this)).then(this.showSections.bind(this)).then(this.showImages.bind(this));
-        },
+    start: function start() {
+      this.loadImages().then(this.hideTitle.bind(this)).then(this.showSections.bind(this)).then(this.showImages.bind(this));
+    },
 
-        loadImages: function loadImages() {
-            var _this = this;
+    loadImages: function loadImages() {
+      var _this = this;
 
-            var items = this.get('items'),
-                promises = items.map(function (item) {
-                return _this.loadImage(item.url);
-            });
+      var items = this.get('items'),
+        promises = items.map(function (item) {
+          return _this.loadImage(item.url);
+        });
 
-            promises.push(new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(resolve, 12000);
-            }));
+      promises.push(new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(resolve, 12000);
+      }));
 
-            return _ember['default'].RSVP.all(promises);
-        },
+      return _ember['default'].RSVP.all(promises);
+    },
 
-        hideTitle: function hideTitle() {
-            var _this2 = this;
+    hideTitle: function hideTitle() {
+      var _this2 = this;
 
-            this.set('titleState', 'hiding');
+      this.set('titleState', 'hiding');
 
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                setTimeout(function () {
-                    _this2.set('titleState', 'hidden');
-                    resolve();
-                }, 1000);
-            });
-        },
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        setTimeout(function () {
+          _this2.set('titleState', 'hidden');
+          resolve();
+        }, 1000);
+      });
+    },
 
-        showSections: function showSections() {
-            _ember['default'].$('#sound').get(0).play();
+    showSections: function showSections() {
+      _ember['default'].$('#sound').get(0).play();
 
-            var promise = _ember['default'].RSVP.resolve(),
-                items = this.get('sectionsAnimations');
+      var promise = _ember['default'].RSVP.resolve(),
+        items = this.get('sectionsAnimations');
 
-            // items.shift();
-            // items.shift();
-            // items.shift();
+      // items.shift();
+      // items.shift();
+      // items.shift();
 
-            items.map(function (item) {
-                promise = promise.then(item);
-            });
+      items.map(function (item) {
+        promise = promise.then(item);
+      });
 
-            return promise;
-        },
+      return promise;
+    },
 
-        showImages: function showImages() {
-            this.set('imagesState', 'visible');
+    showImages: function showImages() {
+      this.set('imagesState', 'visible');
 
-            setTimeout(function () {
-                _ember['default'].$('.items').masonry({
-                    columnWidth: '.items-sizer',
-                    itemSelector: '.item',
-                    percentPosition: true
-                });
-            }, 100);
-        },
+      setTimeout(function () {
+        _ember['default'].$('.items').masonry({
+          columnWidth: '.items-sizer',
+          itemSelector: '.item',
+          percentPosition: true
+        });
+      }, 100);
+    },
 
-        loadImage: function loadImage(src) {
-            return new _ember['default'].RSVP.Promise(function (resolve) {
-                var image = new Image();
-                image.src = src;
-                image.onload = resolve;
-            });
-        },
+    loadImage: function loadImage(src) {
+      return new _ember['default'].RSVP.Promise(function (resolve) {
+        var image = new Image();
+        image.src = src;
+        image.onload = resolve;
+      });
+    },
 
-        onLoadImages: function onLoadImages() {
-            this.set('imagesAvaible', true);
-            this.startAnimations();
-        },
+    onLoadImages: function onLoadImages() {
+      this.set('imagesAvaible', true);
+      this.startAnimations();
+    },
 
-        startAnimations: function startAnimations() {
-            setInterval(this.animateDate.bind(this), 5500);
-            setInterval(this.animateImage.bind(this), 3500);
-        },
+    startAnimations: function startAnimations() {
+      setInterval(this.animateDate.bind(this), 5500);
+      setInterval(this.animateImage.bind(this), 3500);
+    },
 
-        animateDate: function animateDate() {
-            var items = this.get('items'),
-                number = this.random();
+    animateDate: function animateDate() {
+      var items = this.get('items'),
+        number = this.random();
 
-            _ember['default'].set(items[number], "showDate", !items[number].showDate);
+      _ember['default'].set(items[number], "showDate", !items[number].showDate);
 
-            setTimeout(function () {
-                _ember['default'].set(items[number], "showDate", false);
-            }, 4000);
-        },
+      setTimeout(function () {
+        _ember['default'].set(items[number], "showDate", false);
+      }, 4000);
+    },
 
-        animateImage: function animateImage() {
-            var items = this.get('items'),
-                item1 = items[this.random()],
-                item2 = items[this.random()];
+    animateImage: function animateImage() {
+      var items = this.get('items'),
+        item1 = items[this.random()],
+        item2 = items[this.random()];
 
-            if (item1 == item2) return;
+      if (item1 == item2) return;
 
-            var url1 = item1.url,
-                url2 = item2.url;
+      var url1 = item1.url,
+        url2 = item2.url;
 
-            _ember['default'].set(item1, 'background', url2);
-            _ember['default'].set(item2, 'url', url1);
-        },
+      _ember['default'].set(item1, 'background', url2);
+      _ember['default'].set(item2, 'url', url1);
+    },
 
-        random: function random() {
-            return Math.round(Math.random() * this.get('items').length);
-        },
+    random: function random() {
+      return Math.round(Math.random() * this.get('items').length);
+    },
 
-        actions: {
-            onSectionRender: function onSectionRender(callback) {
-                this.get('sectionsAnimations').push(callback);
-            }
-        }
-    });
+    actions: {
+      onSectionRender: function onSectionRender(callback) {
+        this.get('sectionsAnimations').push(callback);
+      }
+    }
+  });
 });
 define('gallery/controllers/object', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller;
 });
 define("gallery/helpers/grid-width-helper", ["exports", "ember"], function (exports, _ember) {
-    exports.gridWidthHelper = gridWidthHelper;
+  exports.gridWidthHelper = gridWidthHelper;
 
-    function gridWidthHelper(params, config) {
-        var length = config.items.length,
-            random = Math.round(Math.random() * 10),
-            result1 = random % 3 == 0,
-            cls = "";
+  function gridWidthHelper(params, config) {
+    var length = config.items.length,
+      random = Math.round(Math.random() * 10),
+      result1 = random % 3 == 0,
+      cls = "";
 
-        if (result1) cls += "item-height-2";
+    if (result1) cls += "item-height-2";
 
-        return cls;
-    }
+    return cls;
+  }
 
-    exports["default"] = _ember["default"].Helper.helper(gridWidthHelper);
+  exports["default"] = _ember["default"].Helper.helper(gridWidthHelper);
 });
 define('gallery/helpers/pluralize', ['exports', 'ember-inflector/lib/helpers/pluralize'], function (exports, _emberInflectorLibHelpersPluralize) {
   exports['default'] = _emberInflectorLibHelpersPluralize['default'];
@@ -582,97 +582,97 @@ define('gallery/router', ['exports', 'ember', 'gallery/config/environment'], fun
     location: 'hash'
   });
 
-  Router.map(function () {});
+  Router.map(function () { });
 
   exports['default'] = Router;
 });
 define('gallery/routes/index', ['exports', 'ember', 'npm:knuth-shuffle'], function (exports, _ember, _npmKnuthShuffle) {
-    exports['default'] = _ember['default'].Route.extend({
-        model: function model() {
-            var items = [{
-                id: 1,
-                date: "Jan 1, 2016"
-            }, {
-                id: 2,
-                date: "Jan 1, 2016"
-            }, {
-                id: 3,
-                date: "Jan 1, 2016"
-            }, {
-                id: 4,
-                date: "Jan 2, 2016"
-            }, {
-                id: 5,
-                date: "Jan 2, 2016"
-            }, {
-                id: 6,
-                date: "Jan 2, 2016"
-            }, {
-                id: 7,
-                date: "Jan 2, 2016"
-            }, {
-                id: 8,
-                date: "Jan 3, 2016"
-            }, {
-                id: 9,
-                date: "Jan 9, 2016"
-            }, {
-                id: 10,
-                date: "Jan 9, 2016"
-            }, {
-                id: 11,
-                date: "Jan 9, 2016"
-            }, {
-                id: 12,
-                date: "Jan 9, 2016"
-            }, {
-                id: 13,
-                date: "Jan 16, 2016"
-            }, {
-                id: 14,
-                date: "Jan 16, 2016"
-            }, {
-                id: 15,
-                date: "Jan 16, 2016"
-            }, {
-                id: 16,
-                date: "Jan 17, 2016"
-            }, {
-                id: 17,
-                date: "Jan 17, 2016"
-            }, {
-                id: 18,
-                date: "Dec 31, 2015"
-            }, {
-                id: 19,
-                date: "June 3, 2013"
-            }, {
-                id: 20,
-                date: "June 3, 2013"
-            }, {
-                id: 21,
-                date: "Jan 29, 2016"
-            }, {
-                id: 22,
-                date: "Jan 16, 2016"
-            }, {
-                id: 23,
-                date: "Jan 9, 2016"
-            }, {
-                id: 24,
-                date: "Jan 2, 2016"
-            }];
+  exports['default'] = _ember['default'].Route.extend({
+    model: function model() {
+      var items = [{
+        id: 1,
+        date: "Jan 1, 2016"
+      }, {
+        id: 2,
+        date: "Jan 1, 2016"
+      }, {
+        id: 3,
+        date: "Jan 1, 2016"
+      }, {
+        id: 4,
+        date: "Jan 2, 2016"
+      }, {
+        id: 5,
+        date: "Jan 2, 2016"
+      }, {
+        id: 6,
+        date: "Jan 2, 2016"
+      }, {
+        id: 7,
+        date: "Jan 2, 2016"
+      }, {
+        id: 8,
+        date: "Jan 3, 2016"
+      }, {
+        id: 9,
+        date: "Jan 9, 2016"
+      }, {
+        id: 10,
+        date: "Jan 9, 2016"
+      }, {
+        id: 11,
+        date: "Jan 9, 2016"
+      }, {
+        id: 12,
+        date: "Jan 9, 2016"
+      }, {
+        id: 13,
+        date: "Jan 16, 2016"
+      }, {
+        id: 14,
+        date: "Jan 16, 2016"
+      }, {
+        id: 15,
+        date: "Jan 16, 2016"
+      }, {
+        id: 16,
+        date: "Jan 17, 2016"
+      }, {
+        id: 17,
+        date: "Jan 17, 2016"
+      }, {
+        id: 18,
+        date: "Dec 31, 2015"
+      }, {
+        id: 19,
+        date: "June 3, 2013"
+      }, {
+        id: 20,
+        date: "June 3, 2013"
+      }, {
+        id: 21,
+        date: "Jan 29, 2016"
+      }, {
+        id: 22,
+        date: "Jan 16, 2016"
+      }, {
+        id: 23,
+        date: "Jan 9, 2016"
+      }, {
+        id: 24,
+        date: "Jan 2, 2016"
+      }];
 
-            for (var i = 0, item; item = items[i]; i++) item.url = '/assets/images/image_' + item.id + '.jpg';
+      for (var i = 0, item; item = items[i]; i++) item.url = '/ruslan-and-lilia/dist/assets/images/image_' + item.id + '.jpg';
 
-            return _npmKnuthShuffle['default'].knuthShuffle(items);
-        },
+      return _npmKnuthShuffle['default'].knuthShuffle(items);
+    },
 
-        setupController: function setupController(controller, model) {
-            controller.set('items', model);
-            controller.start();
-        }
-    });
+    setupController: function setupController(controller, model) {
+      controller.set('items', model);
+      controller.start();
+    }
+  });
 });
 define('gallery/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _emberAjaxServicesAjax) {
   Object.defineProperty(exports, 'default', {
@@ -711,7 +711,7 @@ define("gallery/templates/application", ["exports"], function (exports) {
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("audio");
-        dom.setAttribute(el1, "src", "/assets/audio/oe2.mp3");
+        dom.setAttribute(el1, "src", "/ruslan-and-lilia/dist/assets/audio/oe2.mp3");
         dom.setAttribute(el1, "id", "sound");
         dom.setAttribute(el1, "preload", "auto");
         dom.appendChild(el0, el1);
@@ -1319,22 +1319,22 @@ define("gallery/templates/index", ["exports"], function (exports) {
 
 /* jshint ignore:start */
 
-define('gallery/config/environment', ['ember'], function(Ember) {
+define('gallery/config/environment', ['ember'], function (Ember) {
   var prefix = 'gallery';
-/* jshint ignore:start */
+  /* jshint ignore:start */
 
-try {
-  var metaName = prefix + '/config/environment';
-  var rawConfig = Ember['default'].$('meta[name="' + metaName + '"]').attr('content');
-  var config = JSON.parse(unescape(rawConfig));
+  try {
+    var metaName = prefix + '/config/environment';
+    var rawConfig = Ember['default'].$('meta[name="' + metaName + '"]').attr('content');
+    var config = JSON.parse(unescape(rawConfig));
 
-  return { 'default': config };
-}
-catch(err) {
-  throw new Error('Could not read config from meta tag with name "' + metaName + '".');
-}
+    return { 'default': config };
+  }
+  catch (err) {
+    throw new Error('Could not read config from meta tag with name "' + metaName + '".');
+  }
 
-/* jshint ignore:end */
+  /* jshint ignore:end */
 
 });
 
@@ -1343,7 +1343,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("gallery/app")["default"].create({"name":"gallery","version":"0.0.0+63184da4"});
+  require("gallery/app")["default"].create({ "name": "gallery", "version": "0.0.0+63184da4" });
 }
 
 /* jshint ignore:end */
